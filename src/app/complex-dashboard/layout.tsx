@@ -1,3 +1,5 @@
+import Login from "./@login/page"
+
 export default function ComplexDashboardLayout({
     children,
     users,
@@ -9,8 +11,9 @@ export default function ComplexDashboardLayout({
     revenue: React.ReactNode,
     notifications: React.ReactNode,
 }) {
-    return (
-        <div>
+    const isLoggedIn = false
+    return isLoggedIn ?
+        (<div>
             <div>{children}</div>
             <div style={{ display: "flex" }}>
                 <div style={{ display: "flex", flexDirection: "column" }}>
@@ -19,6 +22,9 @@ export default function ComplexDashboardLayout({
                 </div>
                 <div style={{ display: "flex", flex: 1 }}>{notifications}</div>
             </div>
-        </div>
-    )
+        </div>) :
+        (
+            <Login/>
+        )
+
 }
