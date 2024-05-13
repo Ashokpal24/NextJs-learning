@@ -1,5 +1,5 @@
 import Link from "next/link"
-import generateRandomNumber from "./_lib/random_number"
+import { generateRandomNumber } from "./_lib/random_number"
 export default function Home() {
     return (
         <>
