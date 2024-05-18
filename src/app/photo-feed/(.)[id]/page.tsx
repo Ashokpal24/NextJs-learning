@@ -1,6 +1,6 @@
 import Image from "next/image";
-import wondersImages, { WonderImage } from "../../../wonder";
-import Modal from "../../../../../../components/model";
+import wondersImages, { WonderImage } from "../wonder";
+import Modal from "../../../../components/model";
 
 export default function PhotoModel(
     { params }: {
